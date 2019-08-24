@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="OnlineResortinfo.Site" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   
+  
+     <style type="text/css">
+        .TextLightI
+        {
+            font-family: "Segoe UI Light" , "Segoe UI Web Light" , "Segoe UI Web Regular" , "Segoe UI" , "Segoe UI Symbol" , "HelveticaNeue-Light" , "Helvetica Neue" ,Arial !important;
+        }
+        .WatermarkedInputContainer
+        {
+            position: relative;
+        }
+      
+     
+
+    </style>
+
+     <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="Free Html5 Templates and Free Responsive Themes Designed by Kimmy | zerotheme.com">
+	<meta name="author" content="www.zerotheme.com">
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+  	<link rel="stylesheet" href="css/zerogrid.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/responsiveslides.css" />
+	<link rel="stylesheet" href="css/modal.css" />
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+
+	<script src="../js/jquery.min.js"></script>
+
+  
+	<script src="../js/responsiveslides.js"></script>
+	<script>
+	    $(function () {
+	        $("#slider").responsiveSlides({
+	            auto: true,
+	            pager: false,
+	            nav: true,
+	            speed: 500,
+	            maxwidth: 962,
+	            namespace: "centered-btns"
+	        });
+	    });
+	</script>
+    <link type="text/css" href="css/menu.css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <!--------------Header--------------->
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+   <asp:Label ID="lbladminbar" runat="server"></asp:Label>
+<header>
+<br/>
+<div class="zerogrid" style="padding:10px 0 10px 0;">
+   <span style="float:right;font-size:20px;" class="TextLightI WatermarkedInputContainer" >
+   <asp:LinkButton ID="lbluser" runat="server"></asp:LinkButton>
+   <asp:LinkButton ID="Loginlnk" runat="server" Text="Login" 
+        onclick="Loginlnk_Click"></asp:LinkButton>
+<asp:LinkButton ID="lblSignUp" runat="server" Text="Register" 
+        onclick="lblSignUp_Click"></asp:LinkButton>
+<asp:Label ID="successLabel" runat="server" ></asp:Label>
+   
+   </span>
+</div>
+	<div class="wrap-header zerogrid">
+		<div id="logo"><a href="home.aspx">
+        <p style="font-size:35px;"><asp:Label CssClass="TextLightI WatermarkedInputContainer"  ID="lbltitle" runat="server"></asp:Label></a></p></div>
+
+		<div id="search">
+   
+			 <asp:LinkButton CssClass="button-search" ID="lnksearch" runat="server" 
+                onclick="lnksearch_Click"></asp:LinkButton>
+			<asp:TextBox ID="txtsearch"  placeholder="Search..." runat="server"></asp:TextBox>
+				
+        </div>
+        
+	</div>
+</header>
+
+<nav>
+	<div class="wrap-nav zerogrid">
+		<div class="menu">
+			<ul>
+            <asp:ListView ID="listmenunav" runat="server" ItemPlaceholderID="id">
+                    <LayoutTemplate>
+                    <asp:PlaceHolder runat="server" ID="id"></asp:PlaceHolder>
+                    </LayoutTemplate>
+                    <ItemTemplate>
+                    <li id='<%# Eval("menu_name") %>'><a href='<%# Eval("alias") %>'><%# Eval("menu_name") %></a></li>
+                
+                    </ItemTemplate>
+                </asp:ListView>
+			
+			</ul>
+		</div>
+		
+		<div class="minimenu"><div>MENU</div>
+			<select onchange="location=this.value">
+				
+                 <asp:ListView ID="listminimenu" runat="server" ItemPlaceholderID="id">
+                    <LayoutTemplate>
+                    <asp:PlaceHolder runat="server" ID="id"></asp:PlaceHolder>
+                    </LayoutTemplate>
+                    <ItemTemplate>
+                    <li><a href='<%# Eval("alias") %>'><%# Eval("menu_name") %></a></li>
+                <option value='<%# Eval("alias") %>'><%# Eval("menu_name") %></option>
+                    </ItemTemplate>
+                </asp:ListView>
+				
+			</select>
+		</div>		
+	</div>
+</nav>
+
+<!--------------Content--------------->
+<section id="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+</section>
+<!--------------Footer--------------->
+<footer>
+	<div class="wrap-footer zerogrid">
+		<div class="row block09">
+			
+			<div class="col-1-4">
+				<div class="wrap-col">
+					<div class="box">
+						<div class="heading"><h2>Most Visited Post</h2></div>
+						<div class="content">
+                            <asp:ListView ID="Listlatestpost" runat="server" ItemPlaceholderID="id">
+                           
+                                <LayoutTemplate>
+                                 <ul>
+                                <asp:PlaceHolder ID="id" runat="server"></asp:PlaceHolder>
+                                </ul>
+                                </LayoutTemplate>
+                                <ItemTemplate>
+                                <li><a href='resort.aspx?req=rd&id=<%# Eval("pst_id") %>'><%# Eval("pst_title")%></a></li>
+                                </ItemTemplate>
+                                
+                            </asp:ListView>
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+				<div class="col-1-4">
+				<div class="wrap-col">
+					<div class="box">
+						<div class="heading"><h2>Latest Post</h2></div>
+						<div class="content">
+							<div class="tag">
+							<asp:ListView ID="listoppost" runat="server" ItemPlaceholderID="id">
+                                <LayoutTemplate>
+                                <asp:PlaceHolder runat="server" ID="id"></asp:PlaceHolder>
+                                </LayoutTemplate>
+                                <ItemTemplate>
+                                    <a href='resort.aspx?req=rd&id=<%# Eval("pst_id") %>'><%# Eval("pst_title") %></a>
+                                </ItemTemplate>
+                            </asp:ListView>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row copyright">
+			<p>Copyright © &nbsp;<asp:Label ID="lblfooter" runat="server"></asp:Label> </p>
+		</div>
+	</div>
+</footer>
+    </form>
+
+      
+      
+</body>
+</html>
