@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="online_db" Class="databaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=GONZALES-PC\SQLEXPRESS;Initial Catalog=online_db;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="online_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_soption" Member="soptions">
+    <Type Name="soption">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="disc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_themes_details" Member="thmesds">
+    <Type Name="thmesd">
+      <Column Name="thms_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bg" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hover_color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="themes_color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="selection_color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="selection_bg_color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thms_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_thems_master" Member="themesms">
+    <Type Name="themesm">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thms_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_user_log" Member="tbl_user_logs">
+    <Type Name="tbl_user_log">
+      <Column Name="userlg_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="timein" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="timeout" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="user_tbl_user_log" Member="user" ThisKey="id" OtherKey="id" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_getthemes" Member="view_getthemes">
+    <Type Name="view_gettheme">
+      <Column Name="thms_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_homebanner" Member="homebanners">
+    <Type Name="homebanner">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sitename" Member="sitenames">
+    <Type Name="sitename">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="disc" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="faq" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tagline" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="about" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_userinfo" Member="view_userinfos">
+    <Type Name="view_userinfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="profile_img" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Accounttype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Permission" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_othpage" Member="otherpages">
+    <Type Name="otherpage">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Pagetitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="body" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_menu" Member="menus">
+    <Type Name="menu">
+      <Column Name="menu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="menu_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="alias" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="parent_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="menu_perms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="menu_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_menuvisible" Member="View_menuvisibles">
+    <Type Name="View_menuvisible">
+      <Column Name="menu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="menu_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Visible" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_post" Member="posts">
+    <Type Name="post">
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="post_comment" Member="comments" ThisKey="pst_id" OtherKey="pst_id" Type="comment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_comment" Member="comments">
+    <Type Name="comment">
+      <Column Name="c_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="c_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="c_email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_ip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="post_comment" Member="post" ThisKey="pst_id" OtherKey="pst_id" Type="post" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_user" Member="users">
+    <Type Name="user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="actype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="perms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="user_tbl_user_log" Member="tbl_user_logs" ThisKey="id" OtherKey="id" Type="tbl_user_log" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_comment" Member="view_comments">
+    <Type Name="view_comment">
+      <Column Name="c_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="c_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="c_email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_ip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="comment_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="post_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_alluser" Member="View_allusers">
+    <Type Name="View_alluser">
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Permision" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewpost" Member="viewposts">
+    <Type Name="viewpost">
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="comment_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userimage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="adview" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_gallery" Member="tbl_galleries">
+    <Type Name="tbl_gallery">
+      <Column Name="gallery_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="filename" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_gallery_gallerylist" Member="gallerylists" ThisKey="gallery_id" OtherKey="gallery_id" Type="gallerylist" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_gallerylist" Member="gallerylists">
+    <Type Name="gallerylist">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gallery_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_gallery_gallerylist" Member="tbl_gallery" ThisKey="gallery_id" OtherKey="gallery_id" Type="tbl_gallery" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_count_comment" Method="sp_count_comment">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_count_commentResult">
+      <Column Name="[@pst_ID]" Member="_pst_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_delete_postconten" Method="sp_delete_postconten">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_DELETE_tbl_comment" Method="sp_DELETE_tbl_comment">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_updateappearance" Method="sp_updateappearance">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="thmsid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_select_tbl_sitename" Method="sp_select_tbl_sitename">
+    <ElementType Name="sp_select_tbl_sitenameResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="disc" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="author" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_select_tbl_menu" Method="sp_select_tbl_menu">
+    <ElementType Name="sp_select_tbl_menuResult">
+      <Column Name="menu_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="menu_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="menu_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.f_countcomment" Method="f_countcomment" IsComposable="true">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_login" Method="f_login" IsComposable="true">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.sp_modsitename" Method="sp_modsitename">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="faq" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tagline" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dte" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="author" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="about" Type="System.String" DbType="Text" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_emailExist" Method="f_emailExist" IsComposable="true">
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.f_usernameExist" Method="f_usernameExist" IsComposable="true">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.f_passwordExist" Method="f_passwordExist" IsComposable="true">
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.f_commentpinding" Method="f_commentpinding" IsComposable="true">
+    <Parameter Name="c_status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_UPDATE_userAccount" Method="sp_UPDATE_userAccount">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_save_tbl_menu" Method="sp_save_tbl_menu">
+    <Parameter Name="menu_name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="alias" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="parent_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="menu_perms" Type="System.Int32" DbType="Int" />
+    <Parameter Name="menu_type" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="m_view" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_save_tbl_othpage" Method="sp_save_tbl_othpage">
+    <Parameter Name="Pagetitle" Parameter="pagetitle" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="body" Type="System.String" DbType="Text" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_APPEND_tbl_menu" Method="sp_APPEND_tbl_menu">
+    <Parameter Name="menu_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="menu_name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="alias" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="parent_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="menu_perms" Type="System.Int32" DbType="Int" />
+    <Parameter Name="menu_type" Type="System.Int32" DbType="Int" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="m_view" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_APPEND_tbl_othpage" Method="sp_APPEND_tbl_othpage">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Pagetitle" Parameter="pagetitle" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="body" Type="System.String" DbType="Text" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_posttitleExist" Method="f_posttitleExist" IsComposable="true">
+    <Parameter Name="pst_title" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.sp_DELETE_tbl_gallery" Method="sp_DELETE_tbl_gallery">
+    <Parameter Name="gallery_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_DELETE_tbl_gallerylist" Method="sp_DELETE_tbl_gallerylist">
+    <Parameter Name="gallery_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_selected_tbl_comment" Method="sp_selected_tbl_comment">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="c_status" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_selected_tbl_commentResult">
+      <Column Name="pst_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="c_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="c_email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_ip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.f_userpostExist" Method="f_userpostExist" IsComposable="true">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.f_usercommentExist" Method="f_usercommentExist" IsComposable="true">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.sp_save_tbl_user" Method="sp_save_tbl_user">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="actype" Type="System.Int32" DbType="Int" />
+    <Parameter Name="gender" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="perms" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_select_tbl_post" Method="sp_select_tbl_post">
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_select_tbl_postResult">
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="USER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_UPDATE_tbl_userInfo" Method="sp_UPDATE_tbl_userInfo">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gender" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_view_post" Method="sp_view_post">
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_view_postResult">
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_updatepost_images" Method="sp_updatepost_images">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="img_post" Type="System.String" DbType="NVarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_updatepost" Method="sp_updatepost">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pst_title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="pst_content" Type="System.String" DbType="Text" />
+    <Parameter Name="dte" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ip" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="category" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="user_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_APPEND_tbl_user" Method="sp_APPEND_tbl_user">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="actype" Type="System.Int32" DbType="Int" />
+    <Parameter Name="gender" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="perms" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="image" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_save_tbl_comment" Method="sp_save_tbl_comment">
+    <Parameter Name="pst_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="c_content" Type="System.String" DbType="Text" />
+    <Parameter Name="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="c_email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="c_ip" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="c_status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="user_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_search_categorypost" Method="sp_search_categorypost">
+    <Parameter Name="pst_category" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_search_categorypostResult">
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="comment_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_search_post" Method="sp_search_post">
+    <Parameter Name="pst_search" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_search_postResult">
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comment_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_select_category" Method="sp_select_category">
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_select_categoryResult">
+      <Column Name="pst_title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pst_content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="comment_count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pst_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.f_useridExist" Method="f_useridExist" IsComposable="true">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.sp_savepost" Method="sp_savepost">
+    <Parameter Name="pst_title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="pst_content" Type="System.String" DbType="Text" />
+    <Parameter Name="ip" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="status" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="category" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dte" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Image" Parameter="image" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="userid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="adview" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.f_GallerytitleExist" Method="f_GallerytitleExist" IsComposable="true">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.sp_savegallery" Method="sp_savegallery">
+    <Parameter Name="title" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="filename" Type="System.String" DbType="Text" />
+    <Parameter Name="date" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="user_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_DELETE_tbl_postuser" Method="sp_DELETE_tbl_postuser">
+    <Parameter Name="user_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_DELETE_tbl_commentuser" Method="sp_DELETE_tbl_commentuser">
+    <Parameter Name="user_id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

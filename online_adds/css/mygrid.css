@@ -1,0 +1,63 @@
+.mGrid{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #C0C0C0;
+    border-collapse: collapse;
+    border-left: 1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;
+    margin: 5px 0 10px;
+    overflow: scroll;
+    width: auto;
+    
+}
+.mGrid td{
+	border-bottom:1px solid gray;
+    color: black;
+    padding: 2px;
+   
+}
+.mGrid th{
+   
+    border: thin solid #C0C0C0;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 3px 2px;
+    text-align: left;
+  
+
+}
+.nav_event
+{
+	oacity:0;
+	 
+}
+.mGrid tr:hover  {
+    background-color: #FFFF99;
+    transition: all 0.25s linear;
+
+}
+.mGrid .alt {
+    background: url("grd_alt.png") repeat-x scroll center top #FCFCFC;
+}
+.mGrid .pgr {
+    background: url("grd_pgr.png") repeat-x scroll center top #424242;
+}
+.mGrid .pgr table {
+    margin: 5px 0;
+}
+.mGrid .pgr td {
+    border-left: 1px solid #666666;
+    border-width: 0 0 0 1px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 12px;
+    padding: 0 6px;
+}
+.mGrid .pgr a {
+    color: #666666;
+    text-decoration: none;
+}
+.mGrid .pgr a:hover {
+    color: #000000;
+    text-decoration: none;
+}

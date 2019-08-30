@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B20E577B-FE38-43EE-81D1-2116DA225A1E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>online_adds</RootNamespace>
+    <AssemblyName>online_adds</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.33242, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\login.css" />
+    <Content Include="css\modal.css" />
+    <Content Include="css\pirobox.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\aura_400.font.js" />
+    <Content Include="images\cross_icon_normal.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\pirobox\b_c.png" />
+    <Content Include="images\pirobox\b_l.png" />
+    <Content Include="images\pirobox\b_r.png" />
+    <Content Include="images\pirobox\close_btn.png" />
+    <Content Include="images\pirobox\close_btn_h.png" />
+    <Content Include="images\pirobox\c_l.png" />
+    <Content Include="images\pirobox\c_r.png" />
+    <Content Include="images\pirobox\footer_border_bot.png" />
+    <Content Include="images\pirobox\loading.gif" />
+    <Content Include="images\pirobox\next.png" />
+    <Content Include="images\pirobox\next_h.png" />
+    <Content Include="images\pirobox\prev.png" />
+    <Content Include="images\pirobox\prev_h.png" />
+    <Content Include="images\pirobox\t_c.png" />
+    <Content Include="images\pirobox\t_l.png" />
+    <Content Include="images\pirobox\t_r.png" />
+    <Content Include="images\Stage_BG_btm.png" />
+    <Content Include="images\titlebar_bg.jpg" />
+    <Content Include="interface\987.png" />
+    <Content Include="interface\back_noise.png" />
+    <Content Include="interface\loader.gif" />
+    <Content Include="interface\main_bg_trans.png" />
+    <Content Include="interface\New folder\1total_grid.png" />
+    <Content Include="interface\New folder\back.jpg" />
+    <Content Include="interface\New folder\backgroundmain.png" />
+    <Content Include="interface\New folder\bgnoise.png" />
+    <Content Include="interface\New folder\bigshine.png" />
+    <Content Include="interface\New folder\blog_thumb_border.png" />
+    <Content Include="interface\New folder\main_bg.png" />
+    <Content Include="interface\New folder\shine.png" />
+    <Content Include="interface\New folder\src_grid.png" />
+    <Content Include="interface\New folder\thumb_border.png" />
+    <Content Include="interface\New folder\thumb_holder.png" />
+    <Content Include="js\cufon-yui.js" />
+    <Content Include="js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="js\jquery-1.4.1.js" />
+    <Content Include="js\jquery-1.4.1.min.js" />
+    <Content Include="js\jquery-1.4.2.min.js" />
+    <Content Include="js\pirobox.js" />
+    <Content Include="js\pngfix.js" />
+    <Content Include="pages\account.aspx" />
+    <Content Include="pages\admin.aspx" />
+    <Content Include="pages\adminsetup.aspx" />
+    <Content Include="pages\banner.aspx" />
+    <Content Include="pages\CImage.aspx" />
+    <Content Include="pages\frm.aspx" />
+    <Content Include="pages\logout.aspx" />
+    <Content Include="pages\req.aspx" />
+    <Content Include="sample.aspx" />
+    <Content Include="styles.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clssecurity.cs" />
+    <Compile Include="database.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>database.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="galleryhelperview.cs" />
+    <Compile Include="master_page.Master.cs">
+      <DependentUpon>master_page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master_page.Master.designer.cs">
+      <DependentUpon>master_page.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\account.aspx.cs">
+      <DependentUpon>account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\account.aspx.designer.cs">
+      <DependentUpon>account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\adminsetup.aspx.cs">
+      <DependentUpon>adminsetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\adminsetup.aspx.designer.cs">
+      <DependentUpon>adminsetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\banner.aspx.cs">
+      <DependentUpon>banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\banner.aspx.designer.cs">
+      <DependentUpon>banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Destination.aspx.cs">
+      <DependentUpon>Destination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Destination.aspx.designer.cs">
+      <DependentUpon>Destination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\CImage.aspx.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\CImage.aspx.designer.cs">
+      <DependentUpon>CImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\frm.aspx.cs">
+      <DependentUpon>frm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\frm.aspx.designer.cs">
+      <DependentUpon>frm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\request.aspx.cs">
+      <DependentUpon>request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\request.aspx.designer.cs">
+      <DependentUpon>request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\req.aspx.cs">
+      <DependentUpon>req.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\req.aspx.designer.cs">
+      <DependentUpon>req.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="photogalleryhelper.cs" />
+    <Compile Include="photoposthelper.cs" />
+    <Compile Include="photouserhelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomImage.cs" />
+    <Compile Include="sample.aspx.cs">
+      <DependentUpon>sample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sample.aspx.designer.cs">
+      <DependentUpon>sample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="userviewerphotohelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\modern-business.css" />
+    <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="font-awesome\css\font-awesome.min.css" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\modern-business.js" />
+    <Content Include="master_page.Master" />
+    <Content Include="pages\Destination.aspx" />
+    <Content Include="pages\request.aspx" />
+    <Content Include="pages\home.aspx" />
+    <Content Include="profilepic\oreginal\harold_120000 AM-Monday January 01 0001-Windows_Mobile_6_1_Wallpaper_by_Mccoy88f.jpg" />
+    <Content Include="profilepic\oreginal\ricky_120000 AM-Monday January 01 0001-27613cebuana-bikini-11.jpg" />
+    <Content Include="profilepic\oreginal\rowen_120000 AM-Monday January 01 0001-7.jpg" />
+    <Content Include="profilepic\oreginal\rowen_120000 AM-Monday January 01 0001-me.jpg" />
+    <Content Include="profilepic\oreginal\yojhh_120000 AM-Monday January 01 0001-Image2992.jpg" />
+    <Content Include="profilepic\oreginal\_120000 AM-Monday January 01 0001-935339_534078096633364_1017824882_n.jpg" />
+    <Content Include="profilepic\thumb\120000 AM-Monday January 01 0001-935339_534078096633364_1017824882_n.jpg" />
+    <Content Include="profilepic\thumb\default.png" />
+    <Content Include="profilepic\thumb\harold_120000 AM-Monday January 01 0001-Windows_Mobile_6_1_Wallpaper_by_Mccoy88f.jpg" />
+    <Content Include="profilepic\thumb\ricky_120000 AM-Monday January 01 0001-27613cebuana-bikini-11.jpg" />
+    <Content Include="profilepic\thumb\rowen_120000 AM-Monday January 01 0001-7.jpg" />
+    <Content Include="profilepic\thumb\rowen_120000 AM-Monday January 01 0001-me.jpg" />
+    <Content Include="profilepic\thumb\yojhh_120000 AM-Monday January 01 0001-Image2992.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="database.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>database.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="database.dbml.layout">
+      <DependentUpon>database.dbml</DependentUpon>
+    </None>
+    <None Include="font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="font-awesome\fonts\FontAwesome.otf" />
+    <None Include="font-awesome\less\bordered-pulled.less" />
+    <None Include="font-awesome\less\core.less" />
+    <None Include="font-awesome\less\fixed-width.less" />
+    <None Include="font-awesome\less\font-awesome.less" />
+    <None Include="font-awesome\less\icons.less" />
+    <None Include="font-awesome\less\larger.less" />
+    <None Include="font-awesome\less\list.less" />
+    <None Include="font-awesome\less\mixins.less" />
+    <None Include="font-awesome\less\path.less" />
+    <None Include="font-awesome\less\rotated-flipped.less" />
+    <None Include="font-awesome\less\spinning.less" />
+    <None Include="font-awesome\less\stacked.less" />
+    <None Include="font-awesome\less\variables.less" />
+    <None Include="font-awesome\scss\font-awesome.scss" />
+    <None Include="font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="font-awesome\scss\_core.scss" />
+    <None Include="font-awesome\scss\_fixed-width.scss" />
+    <None Include="font-awesome\scss\_icons.scss" />
+    <None Include="font-awesome\scss\_larger.scss" />
+    <None Include="font-awesome\scss\_list.scss" />
+    <None Include="font-awesome\scss\_mixins.scss" />
+    <None Include="font-awesome\scss\_path.scss" />
+    <None Include="font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="font-awesome\scss\_spinning.scss" />
+    <None Include="font-awesome\scss\_stacked.scss" />
+    <None Include="font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="thubs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62431</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

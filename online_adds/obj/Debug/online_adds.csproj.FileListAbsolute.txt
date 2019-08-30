@@ -1,0 +1,10 @@
+C:\Users\gonzales\Desktop\online_adds\online_adds\bin\online_adds.dll
+C:\Users\gonzales\Desktop\online_adds\online_adds\bin\online_adds.pdb
+C:\Users\gonzales\Desktop\online_adds\online_adds\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\gonzales\Desktop\online_adds\online_adds\obj\Debug\online_adds.dll
+C:\Users\gonzales\Desktop\online_adds\online_adds\obj\Debug\online_adds.pdb
+C:\Users\Gonzales\Desktop\1online_adds\online_adds\bin\online_adds.dll
+C:\Users\Gonzales\Desktop\1online_adds\online_adds\bin\online_adds.pdb
+C:\Users\Gonzales\Desktop\1online_adds\online_adds\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gonzales\Desktop\1online_adds\online_adds\obj\Debug\online_adds.dll
+C:\Users\Gonzales\Desktop\1online_adds\online_adds\obj\Debug\online_adds.pdb
